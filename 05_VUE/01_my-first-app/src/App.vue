@@ -10,10 +10,19 @@ import SlotParent from './components/03_slot-teleport/SlotParent.vue';
 import TeleportParent from './components/03_slot-teleport/TeleportParent.vue';
 import VmodelModalParent from './components/03_slot-teleport/VmodelModalParent.vue';
 import ProvideParent from './components/04_provide/ProvideParent.vue';
+import Computed from './components/05_composition-api/Computed.vue';
+import Counter from './components/05_composition-api/Counter.vue';
+import QuizParent from './components/05_composition-api/QuizParent.vue';
+import RefReactive from './components/05_composition-api/RefReactive.vue';
+import Vue3EmitParent from './components/05_composition-api/Vue3EmitParent.vue';
+import Vue3LifCylce from './components/05_composition-api/Vue3LifCylce.vue';
+import Vue3PropsParent from './components/05_composition-api/Vue3PropsParent.vue';
+import Watch from './components/05_composition-api/Watch.vue';
+import WatchEffect from './components/05_composition-api/WatchEffect.vue';
 </script>
 
 <template>
-  <ProvideParent />
+  <QuizParent />
 </template>
 
 <style scoped></style>
