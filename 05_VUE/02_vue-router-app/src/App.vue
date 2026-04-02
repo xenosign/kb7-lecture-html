@@ -1,6 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
 import RouterHeader from './components/RouterHeader.vue';
+
+window.localStorage.setItem('name', '이효석');
+console.log(window.localStorage.getItem('name'));
+localStorage.setItem('judengchi', '구치파치');
+localStorage.removeItem('name');
+localStorage.clear();
+console.log(localStorage);
 </script>
 
 <template>
@@ -17,6 +24,8 @@ import RouterHeader from './components/RouterHeader.vue';
       <RouterLink to="/dynamic-watch/happy">WatchHappy</RouterLink>
       /
       <RouterLink to="/dynamic-watch/exciting">WatchExciting</RouterLink>
+      /
+      <RouterLink to="/cors">Cors</RouterLink>
     </nav>
   </header>
   <RouterHeader />

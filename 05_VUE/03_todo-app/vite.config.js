@@ -15,8 +15,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target:
-          'https://port-0-kb7-back-node-mmc3pmla14c7b8b4.sel3.cloudtype.app',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
