@@ -20,6 +20,18 @@ const fetchTodo = async () => {
   }
 };
 
+const deleteTodo = async (id) => {
+  try {
+    const deleteUrl = BASE_URL + `/todos/${id}`;
+    const deleteRes = await axios.delete(deleteUrl);
+    console.log(deleteRes.data);
+
+    router.push({ name: 'todo' });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 fetchTodo();
 </script>
 
@@ -32,7 +44,7 @@ fetchTodo();
     <h2>done : {{ todo.done }}</h2>
     <button @click="router.push({ name: 'todo' })">목록</button>
     <button>수정</button>
-    <button>삭제</button>
+    <button @click="deleteTodo(todo.id)">삭제</button>
   </div>
 </template>
 
