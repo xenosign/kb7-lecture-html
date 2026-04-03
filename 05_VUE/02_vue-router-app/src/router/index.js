@@ -32,6 +32,11 @@ const router = createRouter({
       component: () => import('@/views/CorsView.vue'),
     },
     {
+      path: '/cors-ex',
+      name: 'cors-ex',
+      component: () => import('@/views/CorsExView.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'notfound',
       component: () => import('@/views/NotFound.vue'),

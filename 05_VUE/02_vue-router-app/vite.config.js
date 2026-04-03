@@ -20,6 +20,12 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
+      '/ex-api': {
+        target:
+          'https://port-0-kb7-back-node-mmc3pmla14c7b8b4.sel3.cloudtype.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/ex-api/, ''),
+      },
     },
   },
 });

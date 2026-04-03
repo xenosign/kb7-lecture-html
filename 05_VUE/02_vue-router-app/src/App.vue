@@ -26,6 +26,8 @@ console.log(localStorage);
       <RouterLink to="/dynamic-watch/exciting">WatchExciting</RouterLink>
       /
       <RouterLink to="/cors">Cors</RouterLink>
+      /
+      <RouterLink to="/cors-ex">CorsEx</RouterLink>
     </nav>
   </header>
   <RouterHeader />
