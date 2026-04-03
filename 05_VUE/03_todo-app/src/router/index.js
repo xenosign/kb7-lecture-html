@@ -16,10 +16,34 @@ const router = createRouter({
     {
       path: '/todo',
       name: 'todo',
-      component: () => import('@/pages/TodoPage.vue'),
+      component: () => import('@/pages/todo/TodoListPage.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/todo/detail/:id',
+      name: 'todo/detail',
+      component: () => import('@/pages/todo/TodoDetailPage.vue'),
+      meta: { requiresAuth: true },
+      props: true,
+    },
+    {
+      path: '/todo/write',
+      name: 'todo/write',
+      component: () => import('@/pages/todo/TodoWritePage.vue'),
       meta: { requiresAuth: true },
     },
   ],
+});
+
+router.beforeEach(function (to, from) {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (localStorage.getItem('auth') !== 'true') {
+      alert('로그인이 필요한 서비스입니다');
+      return { name: 'login' };
+    }
+  }
+
+  return true;
 });
 
 export default router;
