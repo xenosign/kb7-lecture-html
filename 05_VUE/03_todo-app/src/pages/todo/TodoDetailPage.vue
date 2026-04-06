@@ -43,7 +43,10 @@ fetchTodo();
     <h2>desc : {{ todo.desc }}</h2>
     <h2>done : {{ todo.done }}</h2>
     <button @click="router.push({ name: 'todo' })">목록</button>
-    <button>수정</button>
+    <button @click="router.push(`/todo/edit/${todoId}`)">수정</button>
+    <button @click="router.push({ name: 'todo/edit', params: { id: todoId } })">
+      수정
+    </button>
     <button @click="deleteTodo(todo.id)">삭제</button>
   </div>
 </template>
